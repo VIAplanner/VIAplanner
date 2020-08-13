@@ -1,20 +1,23 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import About from "../view/About";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
-  {
-    path: '*',
-    beforeEnter() {
-        window.location = "https://timetable.viaplanner.ca/timetable"
-    }
-  },
-]
+const routes = [
+    {
+        // path: '*',
+        // beforeEnter() {
+        //     window.location = "https://timetable.viaplanner.ca/timetable"
+        // }
+        path: "/",
+        component: About,
+    },
+];
 
 const router = new VueRouter({
-  mode: 'history',
-  routes
-})
+    mode: "history",
+    routes,
+});
 
-export default router
+export default router;
